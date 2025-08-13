@@ -1,21 +1,13 @@
-# 🎲 D&D LLM Chat Adventure
+# LLM 🎲 GM Practice
 
-A Deno-powered web application that demonstrates LLMs playing Dungeons & Dragons together! This project showcases how to build interactive AI characters that roleplay in a text-based D&D adventure, perfect for deployment on Deno Deploy.
+A Deno-powered web application that demonstrates how to use an LLMs in your Deno project.
 
-## 🌟 Features
-
-- **Multiple AI Characters**: Each character has their own personality and class
-- **Real-time Chat**: WebSocket-powered real-time communication
-- **Game Master Interface**: Control the narrative as the GM
-- **LLM Integration**: Supports OpenAI, Anthropic, or mock responses for testing
-- **Deno Deploy Ready**: Optimized for deployment on Deno's cloud platform
-
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
 - [Deno](https://deno.com/) installed on your system
-- (Optional) API keys for OpenAI or Anthropic for real LLM responses
+- API keys for [OpenAI](https://openai.com/) or [Anthropic](https://www.anthropic.com/) for real LLM responses
 
 ### Local Development
 
@@ -39,7 +31,7 @@ A Deno-powered web application that demonstrates LLMs playing Dungeons & Dragons
 
 4. **Open your browser** to `http://localhost:8000`
 
-## 🎮 How to Play
+## How to Play
 
 1. **Start a New Game**: Enter a scenario in the GM prompt box
 2. **Watch the Magic**: AI characters will introduce themselves
@@ -52,9 +44,9 @@ A Deno-powered web application that demonstrates LLMs playing Dungeons & Dragons
 - *"A dragon has been terrorizing the nearby village. The mayor offers a reward for its defeat."*
 - *"You discover an ancient dungeon entrance hidden behind a waterfall."*
 
-## 🏗️ Project Structure
+## Project Structure
 
-```
+```sh
 ├── main.ts                 # Main server entry point
 ├── deno.json              # Deno configuration
 ├── src/
@@ -69,7 +61,7 @@ A Deno-powered web application that demonstrates LLMs playing Dungeons & Dragons
     └── index.html         # Web interface (embedded)
 ```
 
-## 🤖 LLM Configuration
+## LLM Configuration
 
 The application supports multiple LLM providers:
 
@@ -90,7 +82,7 @@ export OPENAI_API_KEY="your-key-here"
 export ANTHROPIC_API_KEY="your-key-here"
 ```
 
-## 🚀 Deployment to Deno Deploy
+## Deployment to Deno Deploy
 
 1. **Prepare your project**:
    ```bash
@@ -107,7 +99,7 @@ export ANTHROPIC_API_KEY="your-key-here"
    - `OPENAI_API_KEY` (if using OpenAI)
    - `ANTHROPIC_API_KEY` (if using Anthropic)
 
-## 🎯 Default Characters
+## Default Characters
 
 The application comes with three pre-configured characters:
 
@@ -115,7 +107,7 @@ The application comes with three pre-configured characters:
 - **Lyra** (Wizard): Curious and analytical, loves solving puzzles  
 - **Finn** (Rogue): Witty and sneaky, prefers clever solutions
 
-## 🛠️ Development Commands
+## Development Commands
 
 ```bash
 # Start development server with file watching
@@ -131,7 +123,7 @@ deno task test
 deno check main.ts
 ```
 
-## 🎨 Customization
+## Customization
 
 ### Adding New Characters
 
@@ -152,14 +144,14 @@ Edit the system prompts in `Character.ts` to adjust how characters respond.
 
 The HTML interface is embedded in `main.ts` - customize the CSS for your preferred look.
 
-## 🔧 API Endpoints
+## API Endpoints
 
 - `GET /` - Web interface
 - `POST /api/game/start` - Start a new game
 - `GET /api/game/status?gameId={id}` - Get game status
 - `WebSocket /ws` - Real-time game communication
 
-## 📝 Example Usage
+## Example Usage
 
 ```typescript
 // Starting a new game
@@ -175,7 +167,7 @@ const response = await fetch('/api/game/start', {
 });
 ```
 
-## 🤝 Contributing
+## Contributing
 
 This project demonstrates modern Deno development practices:
 
