@@ -2,6 +2,8 @@
 
 A Deno-powered web application that demonstrates how to use an LLMs in your Deno project.
 
+<img width="900" height="1265" alt="image" src="https://github.com/user-attachments/assets/7e417db6-a0bf-4607-b12b-eaa12ed6da1b" />
+
 ## Quick Start
 
 ### Prerequisites
