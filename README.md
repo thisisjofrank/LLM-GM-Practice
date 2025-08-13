@@ -48,17 +48,24 @@ A Deno-powered web application that demonstrates how to use an LLMs in your Deno
 
 ```sh
 ├── main.ts                 # Main server entry point
-├── deno.json              # Deno configuration
+├── main_test.ts            # Test file
+├── deno.json               # Deno configuration
+├── .env                    # Copy the example env file provided
 ├── src/
+│   ├── config/
+│   │   ├── characters.ts   # Character configurations and presets
+│   │   └── scenarios.ts    # Pre-defined scenario templates
 │   ├── game/
-│   │   ├── GameManager.ts  # Core game logic
+│   │   ├── GameManager.ts  # Core game logic and state management
 │   │   └── Character.ts    # AI character implementation
 │   ├── llm/
-│   │   └── LLMProvider.ts  # LLM integration layer
+│   │   └── LLMProvider.ts  # LLM integration layer (OpenAI/Anthropic)
 │   └── server/
 │       └── WebSocketHandler.ts # Real-time communication
 └── static/
-    └── index.html         # Web interface (embedded)
+    ├── index.html         # Web interface
+    ├── styles.css         # Application styling
+    └── example-opening.txt # Sample scenario text
 ```
 
 ## LLM Configuration
@@ -142,7 +149,7 @@ Edit the system prompts in `Character.ts` to adjust how characters respond.
 
 ### Styling the Interface
 
-The HTML interface is embedded in `main.ts` - customize the CSS for your preferred look.
+Customize the application's appearance by editing `static/styles.css` and `static/index.html` for your preferred look and functionality.
 
 ## API Endpoints
 
@@ -167,6 +174,12 @@ const response = await fetch('/api/game/start', {
 });
 ```
 
+## Example opening scenario
+
+```txt
+You awake to find yourself in a dark room, you can see only as far as your hand in front of your face. You can smell damp in the air and feel cold flagstones beneath your hands as you try to get up. You can hear others around you doing the same.
+```
+
 ## Contributing
 
 This project demonstrates modern Deno development practices:
@@ -184,7 +197,7 @@ Feel free to extend it with:
 - Multi-room support
 - Voice integration
 
-## 📜 License
+## License
 
 This project is open source and available under the MIT License.
 

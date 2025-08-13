@@ -32,6 +32,19 @@ async function handler(req: Request): Promise<Response> {
         });
       }
 
+    case "/app.js":
+      try {
+        const js = await Deno.readTextFile("./static/app.js");
+        return new Response(js, {
+          headers: { "content-type": "application/javascript" },
+        });
+      } catch {
+        return new Response("/* JavaScript file not found */", {
+          status: 404,
+          headers: { "content-type": "application/javascript" },
+        });
+      }
+
     case "/api/game/start":
       if (req.method === "POST") {
         const body = await req.json();
